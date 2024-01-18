@@ -13,6 +13,8 @@
 		}
 
 		currentElement = shuffledElements.pop();
+
+		remainingElements = shuffledElements.length;
 	};
 
 	const elements  = [
@@ -26,6 +28,8 @@
 
 	let shuffledElements = [];
   	let currentElement = "";
+	  let remainingElements;
+
 </script>
 
 <svelte:head>
@@ -41,6 +45,7 @@
 	{/if}
 	<button on:click={pickRandomElement}>Click me</button>
 	<button on:click={pickRandomElement}>Change array</button>
+	<p>Remaining Elements: {remainingElements}</p>
 
 
 
